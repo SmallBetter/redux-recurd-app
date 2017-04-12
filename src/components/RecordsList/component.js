@@ -14,7 +14,7 @@ const RecordsList = ({ records }) => (
       </tr>
     </thead>
     <tbody>
-      {records.map(record => <RecordsItem key={records.id} {...record} />)}
+      {records.map(record => <RecordsItem key={record.id} {...record} />)}
     </tbody>
   </table>
 )

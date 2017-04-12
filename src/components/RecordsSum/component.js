@@ -13,9 +13,9 @@ const RecordsSum = ({ records }) => (
     </thead>
     <tbody>
       <tr>
-        <td>{records.map(record => record.amount).reduce((p, i) => i > 0 ? p + i : p, 0)}</td>
-        <td>{records.map(record => record.amount).reduce((p, i) => i < 0 ? p + i : p, 0)}</td>
-        <td>{records.map(record => record.amount).reduce((p, i) => i ? p + i : p, 0)}</td>
+        <td>$ {records.map(record => record.amount).reduce((p, i) => +i > 0 ? p + i : p, 0)}</td>
+        <td>$ {records.map(record => record.amount).reduce((p, i) => i < 0 ? p + i : p, 0)}</td>
+        <td>$ {records.map(record => record.amount).reduce((p, i) => i ? p + i : p, 0)}</td>
       </tr>
     </tbody>
   </table>

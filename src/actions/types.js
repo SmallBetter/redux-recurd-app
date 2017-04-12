@@ -1,6 +1,6 @@
 const TYPE = {
-  EXAMPLE: {
-    INCREASE: 'EXAMPLE_INCREASE'
+  RECORDS: {
+    ADD: 'RECORDS_ADD'
   }
 }
 
