@@ -1,0 +1,38 @@
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 2px solid #cbcbcb;
+}
+
+th {
+  width: 250px;
+  border-left: 2px solid #cbcbcb;
+  font-size: inherit;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0.5rem 1rem;
+
+}
+
+td {
+  border-left: 2px solid #cbcbcb;
+  font-size: inherit;
+  overflow: visible;
+  padding: 0.5rem 1rem;
+}
+
+thead {
+  background-color: #e0e0e0;
+  color: #000000;
+  text-align: left;
+  vertical-align: bottom;
+}
+button {
+  margin: 2px;
+}
+tbody {
+  text-align: left;
+}
