@@ -29,7 +29,9 @@ class RecordsInput extends Component {
 
   handleClick = () => {
     const State = this.state
+    const re = /^(\d{2})-(\d{2})-(\d{4})/g
     if ((State.date.length > 0 &&
+      re.test(State.date) &&
       State.title.length > 0 &&
       State.amount.length > 0 &&
       State.amount < Infinity)) { this.props.addRecords({ ...this.state }) }
