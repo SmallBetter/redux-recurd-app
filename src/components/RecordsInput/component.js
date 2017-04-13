@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import './assets/style.css'
 
 class RecordsInput extends Component {
@@ -31,7 +31,8 @@ class RecordsInput extends Component {
     const State = this.state
     if ((State.date.length > 0 &&
       State.title.length > 0 &&
-      State.amount > 0)) { this.props.addRecords({ ...this.state }) }
+      State.amount.length > 0 &&
+      State.amount < Infinity)) { this.props.addRecords({ ...this.state }) }
     this.setState({
       date: '',
       title: '',
@@ -42,7 +43,7 @@ class RecordsInput extends Component {
 
   render() {
     return (
-      <div>
+      <div className="d">
         <input type="text" placeholder="Date" value={this.state.date} onChange={this.handledate} />
         <input type="text" placeholder="Title" value={this.state.title} onChange={this.handletitle} />
         <input type="text" placeholder="Amount" value={this.state.amount} onChange={this.handleamount} />
@@ -50,6 +51,10 @@ class RecordsInput extends Component {
       </div>
     )
   }
+}
+
+RecordsInput.propTypes = {
+  addRecords: PropTypes.func.isRequired
 }
 
 export default RecordsInput

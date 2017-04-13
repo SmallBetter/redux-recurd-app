@@ -9,9 +9,14 @@ export default (records = initialStore.records, action) => {
         id: records.length ? records[records.length - 1].id + 1 : 1,
         date: action.payload.date,
         title: action.payload.title,
-        amount: action.payload.amount
+        amount: (action.payload.amount * 1)
       }]
     }
+
+    case TYPE.RECORDS.REMOVE: {
+      return records.filter(record => record.id ? record.id !== action.payload.id : record)
+    }
+
     default: {
       return records
     }

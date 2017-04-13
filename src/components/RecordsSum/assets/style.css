@@ -1,5 +1,6 @@
 
 table {
+  width: 60em;
   margin: 0 auto;
   border-collapse: collapse;
   border-spacing: 0;
@@ -9,7 +10,6 @@ table {
 
 thead {
   background-color: #e0e0e0;
-  color: #000000;
   text-align: left;
   vertical-align: bottom;
 }
@@ -18,4 +18,25 @@ button {
 }
 tbody {
   text-align: left;
+}
+
+.Balance {
+  background-color: #91eeff;
+  color: #0001f4;
+}
+
+.Debit {
+  background-color: #f29fa0;
+  color: #ff0000;
+}
+
+.Credit {
+  background-color: #b9ffb0;
+  color: #00a503;
+}
+
+h1 {
+  color: #008612;
+  width: 70em;
+  float: right;
 }

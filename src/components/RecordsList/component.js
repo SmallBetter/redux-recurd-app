@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import './assets/style.css'
 import RecordsItem from '../RecordsItem'
 
@@ -19,5 +19,14 @@ const RecordsList = ({ records }) => (
   </table>
 )
 
+RecordsList.propTypes = {
+  records: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    date: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired
+  })
+  ).isRequired
+}
 
 export default RecordsList
