@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import './assets/style.css'
 
 
-const RecordsSum = ({ records }) => (
+const RecordsSum = ({ record }) => (
   <div>
     <h1>Records</h1>
     <table>
@@ -15,9 +15,9 @@ const RecordsSum = ({ records }) => (
       </thead>
       <tbody>
         <tr>
-          <td>$ {records.map(record => record.amount).reduce((p, i) => i > 0 ? p + i : p, 0)}</td>
-          <td>$ {records.map(record => record.amount).reduce((p, i) => i < 0 ? p + i : p, 0)}</td>
-          <td>$ {records.map(record => record.amount).reduce((p, i) => p + i, 0)}</td>
+          <td>$ {record.reduce((p, i) => i > 0 ? p + i : p, 0)}</td>
+          <td>$ {record.reduce((p, i) => i < 0 ? p + i : p, 0)}</td>
+          <td>$ {record.reduce((p, i) => p + i, 0)}</td>
         </tr>
       </tbody>
     </table>
@@ -25,13 +25,7 @@ const RecordsSum = ({ records }) => (
 )
 
 RecordsSum.propTypes = {
-  records: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    date: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired
-  })
-  ).isRequired
+  record: PropTypes.number.isRequired
 }
 
 export default RecordsSum
